@@ -2,10 +2,18 @@
   margin-bottom: 20px;
 }
 
-fieldset :last-child {
+input {
+  margin-bottom: 10px;
+}
+
+fieldset input:last-child {
   margin-bottom: 0;
 }
 
-input {
+div {
   margin-bottom: 10px;
+}
+
+input[type="color"] {
+  margin-top: 4px;
 }

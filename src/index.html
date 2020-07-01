@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form onsubmit="onSubmit()" autocomplete="off">
-      <fieldset class="wrapper">
+    <form onsubmit="onSubmit()">
+      <fieldset class="block">
         <legend>Personal information</legend>
         <label for="surname">Surname:</label>
         <input
           type="text"
           name="surname"
           id="surname"
+          autocomplete="off"
         >
         <br>
         <label for="name">Name:</label>
@@ -26,6 +27,7 @@
           type="text"
           name="name"
           id="name"
+          autocomplete="off"
         >
         <br>
         <label for="age">How old are You?</label>
@@ -54,7 +56,7 @@
           id="agree"
         >
       </fieldset>
-      <fieldset class="wrapper">
+      <fieldset class="block">
         <legend>Registration</legend>
         <label for="email" required>E-mail:</label>
         <input
@@ -72,7 +74,7 @@
           id="pass"
         >
       </fieldset>
-      <fieldset class="wrapper">
+      <fieldset class="block">
         <legend>An interesting fact about you!</legend>
         <label for="cats0">Do you love cats?</label>
         <input
@@ -102,18 +104,21 @@
           type="time"
           name="bedtime"
           id="bedtime"
+          step="2"
         >
         <br>
-        <label for="car">What are your favorite brand of cars?</label>
-        <select
-          name="car"
-          id="car"
-          size="4"
-        >
-          <option value="bmw">BMW</option>
-          <option value="audi">Audi</option>
-          <option value="lada">Lada</option>
-        </select>
+        <div>
+          <label for="car">What are your favorite brand of cars?</label>
+          <select
+            name="car"
+            id="car"
+            size="4"
+          >
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="lada">Lada</option>
+          </select>
+        </div>
         <br>
         <label for="rate">How do you rate our work?</label>
         <input
@@ -124,10 +129,12 @@
           step="10"
         >
       </fieldset>
-      <fieldset class="wrapper">
+      <fieldset class="block">
         <legend>Additional info:</legend>
-        <label for="comments">Comments:</label>
-        <textarea name="comments" id="comments"></textarea>
+        <div>
+          <label for="comments">Comments:</label>
+          <textarea name="comments" id="comments"></textarea>
+        </div>
         <br>
         <label for="recommend">Would you recommend us?</label>
         <select

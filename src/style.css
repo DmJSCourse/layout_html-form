@@ -1,8 +1,11 @@
-.wrapper {
+.block {
   margin-bottom: 20px;
 }
 
-input,
-select {
+fieldset :last-child {
+  margin-bottom: 0;
+}
+
+input {
   margin-bottom: 10px;
 }

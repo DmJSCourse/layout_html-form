@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <form onsubmit="onSubmit()">
+    <form
+      action="#"
+      method="POST"
+      onsubmit="onSubmit()"
+    >
       <fieldset class="block">
         <legend>Personal information</legend>
         <label for="surname">Surname:</label>
@@ -20,6 +24,7 @@
           name="surname"
           id="surname"
           autocomplete="off"
+          class="form-input"
         >
         <br>
         <label for="name">Name:</label>
@@ -28,6 +33,7 @@
           name="name"
           id="name"
           autocomplete="off"
+          class="form-input"
         >
         <br>
         <label for="age">How old are You?</label>
@@ -40,6 +46,7 @@
           max="200"
           minlength="1"
           maxlength="3"
+          class="form-input"
         >
         <br>
         <label for="birthday">Full date of birth:</label>
@@ -47,13 +54,15 @@
           type="date"
           name="birthday"
           id="birthday"
+          class="form-input"
         >
         <br>
         <label for="agree">I accept the term of the agreement</label>
         <input
           type="checkbox"
-          name="agree"
+          name="agreement-terms"
           id="agree"
+          class="last"
         >
       </fieldset>
       <fieldset class="block">
@@ -65,6 +74,7 @@
           placeholder="email@example.com"
           id="email"
           multiple
+          class="form-input"
         >
         <br>
         <label for="pass">Password:</label>
@@ -72,6 +82,7 @@
           type="password"
           name="pass"
           id="pass"
+          class="last"
         >
       </fieldset>
       <fieldset class="block">
@@ -82,6 +93,7 @@
           name="cats"
           value="yes"
           id="cats1"
+          class="form-input"
         >
         Yes
         <input
@@ -89,6 +101,7 @@
           name="cats"
           value="no"
           id="cats0"
+          class="form-input"
         >
         No
         <br>
@@ -97,6 +110,7 @@
           type="color"
           name="color"
           id="color"
+          class ="pixel-perfect form-input"
         >
         <br>
         <label for="bedtime">What time do you go to bed?</label>
@@ -105,12 +119,13 @@
           name="bedtime"
           id="bedtime"
           step="2"
+          class="form-input"
         >
         <br>
-        <div>
+        <div class="field-container">
           <label for="car">What are your favorite brand of cars?</label>
           <select
-            name="car"
+            name="car-brand"
             id="car"
             size="4"
           >
@@ -122,15 +137,16 @@
         <label for="rate">How do you rate our work?</label>
         <input
           type="range"
-          name="rate"
+          name="work-rating"
           id="rate"
           value="0"
           step="10"
+          class="last"
         >
       </fieldset>
       <fieldset class="block">
         <legend>Additional info:</legend>
-        <div>
+        <div class="field-container">
           <label for="comments">Comments:</label>
           <textarea name="comments" id="comments"></textarea>
         </div>
@@ -138,12 +154,13 @@
         <select
           name="recommend"
           id="recommend"
+          class="last"
         >
           <option value="yes">yes</option>
           <option value="no">no</option>
         </select>
       </fieldset>
-      <input type="submit" name="submit">
+      <button type="submit" value="submit">Submit</button>
     </form>
     <script type="text/javascript" src="./main.js"></script>
   </body>

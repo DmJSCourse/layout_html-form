@@ -2,15 +2,15 @@
   margin-bottom: 20px;
 }
 
-input,
-div {
+.form-input,
+.field-container {
   margin-bottom: 10px;
 }
 
-fieldset input:last-child {
+.last {
   margin-bottom: 0;
 }
 
-input[type="color"] {
+.pixel-perfect {
   margin-top: 4px;
 }
